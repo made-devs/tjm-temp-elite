@@ -1,26 +1,21 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Palet Warna & Font yang sudah ada */
+  --font-jakarta: var(--font-jakarta), sans-serif;
+  --color-background: #fdfbfa;
+  --color-foreground: #2c2c2c;
+  --color-primary: #f59e0b;
+  --color-muted: #a1a1aa;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Tambahkan ini di akhir file */
+@keyframes blink {
+  50% {
+    opacity: 0;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.animate-blink {
+  animation: blink 0.8s step-end infinite;
 }
