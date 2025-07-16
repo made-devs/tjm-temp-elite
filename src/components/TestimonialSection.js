@@ -25,21 +25,21 @@ export default function TestimonialSection() {
       text: 'Servis di TJM benar-benar memuaskan. Mobil saya yang tadinya sering mogok sekarang jadi prima kembali. Penjelasannya detail dan tidak ada biaya tersembunyi. Sangat direkomendasikan!',
       author: 'Aulia Putri',
       location: 'Jakarta Selatan',
-      avatar: 'https://placehold.co/64x64/E0E0E0/000000?text=AP',
+      avatar: '/avatar1.webp',
     },
     {
       id: 2,
       text: 'Sebagai wanita, saya sering khawatir dibohongi soal mesin. Tapi di TJM, mekaniknya sangat jujur dan edukatif. Mereka menunjukkan langsung komponen yang perlu diganti. Pengalaman servis terbaik sejauh ini.',
       author: 'Dian Lestari',
       location: 'Bekasi, Jawa Barat',
-      avatar: 'https://placehold.co/64x64/E0E0E0/000000?text=DL',
+      avatar: '/avatar2.webp',
     },
     {
       id: 3,
       text: 'Pengerjaannya cepat dan hasilnya luar biasa. AC mobil saya yang sudah tidak dingin selama berbulan-bulan, sekarang dingin lagi seperti baru. Profesional dan andal. Terima kasih TJM!',
       author: 'Budi Santoso',
       location: 'Tangerang',
-      avatar: 'https://placehold.co/64x64/E0E0E0/000000?text=BS',
+      avatar: '/avatar3.webp',
     },
   ];
 
