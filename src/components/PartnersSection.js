@@ -14,7 +14,7 @@ export default function PartnersSection() {
     // Section utama setinggi layar dengan background dari file galeri1.jpg
     <section
       className="h-screen w-full relative bg-cover bg-center bg-fixed"
-      style={{ backgroundImage: "url('/galeri1.webp')" }}
+      style={{ backgroundImage: "url('/galeri5.webp')" }}
     >
       {/* Overlay gelap untuk kontras */}
       <div className="absolute inset-0 bg-black/50"></div>
