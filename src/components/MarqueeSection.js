@@ -15,7 +15,7 @@ const MarqueeItem = ({ text, color, icon: Icon }) => (
 
 export default function MarqueeSection() {
   return (
-    <section className="w-full py-12 bg-background overflow-hidden">
+    <section className="w-full py-12 font-jakarta bg-background overflow-hidden">
       {/* Baris Atas (Merah, ke Kiri) */}
       <Marquee speed={80} pauseOnHover={true}>
         <MarqueeItem

@@ -58,7 +58,7 @@ export default function TestimonialSection() {
   };
 
   return (
-    <section className="w-full bg-white text-gray-900 py-24 overflow-hidden">
+    <section className="w-full bg-white font-jakarta text-gray-900 py-24 overflow-hidden">
       {' '}
       {/* Tambahkan overflow-hidden */}
       <div className="max-w-[70rem] mx-auto px-4">

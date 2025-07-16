@@ -63,7 +63,7 @@ export default function BlogSection() {
   });
 
   return (
-    <section className="w-full bg-background py-24 overflow-hidden">
+    <section className="w-full bg-background font-jakarta py-24 overflow-hidden">
       <div className="container mx-auto px-6">
         {/* Judul Section dengan animasi */}
         <div

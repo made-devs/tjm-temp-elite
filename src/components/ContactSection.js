@@ -98,7 +98,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="w-full bg-background py-24 overflow-hidden">
+    <section className="w-full font-jakarta bg-background py-24 overflow-hidden">
       <div className="container mx-auto px-6">
         <div
           ref={titleRef}

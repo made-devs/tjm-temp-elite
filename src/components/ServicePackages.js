@@ -49,7 +49,7 @@ export default function ServicePackages() {
     services[0].image;
 
   return (
-    <section ref={ref} className="relative w-full overflow-hidden">
+    <section ref={ref} className="relative font-jakarta w-full overflow-hidden">
       {/* Gambar latar belakang utama */}
       <div
         className="absolute inset-0 bg-cover bg-center transition-all duration-500"
@@ -91,7 +91,7 @@ export default function ServicePackages() {
 
             {/* Bagian Atas: Nomor Layanan */}
             <div
-              className={`relative z-10 text-4xl font-jakarta font-bold transition-opacity duration-300
+              className={`relative z-10 text-4xl  font-bold transition-opacity duration-300
                 ${hoveredServiceId === service.id ? 'opacity-0' : 'opacity-100'}
               `}
             >
