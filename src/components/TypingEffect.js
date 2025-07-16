@@ -1,33 +1,32 @@
-"use client"; // Komponen ini interaktif, jadi butuh 'use client'
+'use client';
 
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
-const TypingEffect = ({
+// THE FIX: Tambahkan prop 'cursorClassName' untuk kustomisasi
+export default function TypingEffect({
   words,
+  cursorClassName = '',
   typingSpeed = 150,
   deletingSpeed = 100,
   pauseDuration = 2000,
-}) => {
+}) {
   const [wordIndex, setWordIndex] = useState(0);
-  const [text, setText] = useState("");
+  const [text, setText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
     const handleTyping = () => {
       const currentWord = words[wordIndex];
 
-      // Logika untuk mengetik atau menghapus
       if (isDeleting) {
         setText((prev) => prev.substring(0, prev.length - 1));
       } else {
         setText((prev) => currentWord.substring(0, prev.length + 1));
       }
 
-      // Ganti mode jika kata selesai diketik atau dihapus
       if (!isDeleting && text === currentWord) {
-        // Jeda setelah selesai mengetik
         setTimeout(() => setIsDeleting(true), pauseDuration);
-      } else if (isDeleting && text === "") {
+      } else if (isDeleting && text === '') {
         setIsDeleting(false);
         setWordIndex((prev) => (prev + 1) % words.length);
       }
@@ -38,7 +37,6 @@ const TypingEffect = ({
       isDeleting ? deletingSpeed : typingSpeed
     );
 
-    // Cleanup function untuk membersihkan timer
     return () => clearTimeout(timer);
   }, [
     wordIndex,
@@ -53,12 +51,11 @@ const TypingEffect = ({
   return (
     <span className="text-primary">
       {text}
+      {/* Menggunakan prop cursorClassName untuk mengatur style kursor */}
       <span
-        className="inline-block h-[6.5rem] animate-blink border-l-2 border-primary ml-1"
+        className={`inline-block align-bottom animate-blink border-l-2 border-primary ml-1 ${cursorClassName}`}
         aria-hidden="true"
       ></span>
     </span>
   );
-};
-
-export default TypingEffect;
+}
