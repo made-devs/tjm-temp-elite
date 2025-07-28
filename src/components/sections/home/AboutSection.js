@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { ArrowDown } from 'lucide-react';
-import AnimatedCounter from './AnimatedCounter'; // Import komponen baru
+import AnimatedCounter from '../../ui/AnimatedCounter'; // Import komponen baru
 
 // Data untuk counter, diubah untuk memisahkan angka dan sufiks
 const stats = [
@@ -23,8 +23,8 @@ export default function AboutSection() {
             <Image
               src="/galeri1.webp"
               alt="Tim Mekanik TJM sedang bekerja"
-              layout="fill"
-              objectFit="cover"
+              fill
+              className="object-cover"
             />
           </div>
         </div>

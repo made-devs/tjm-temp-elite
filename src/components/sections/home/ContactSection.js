@@ -175,8 +175,8 @@ export default function ContactSection() {
                   <Image
                     src={workshop.photo}
                     alt={`Bengkel TJM di ${workshop.city}`}
-                    layout="fill"
-                    objectFit="cover"
+                    fill
+                    className="object-cover"
                   />
                 </div>
                 <p className="text-sm text-muted">{workshop.address}</p>
@@ -210,8 +210,8 @@ export default function ContactSection() {
                     <Image
                       src={workshop.photo}
                       alt={`Bengkel TJM di ${workshop.city}`}
-                      layout="fill"
-                      objectFit="cover"
+                      fill
+                      className="object-cover"
                     />
                   </div>
                   <p className="text-sm text-muted">{workshop.address}</p>

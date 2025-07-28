@@ -2,21 +2,20 @@
 
 import { ArrowLeft, ArrowRight, Quote } from 'lucide-react';
 import { useState } from 'react';
-import { useInView } from 'react-intersection-observer'; // Import hook
+import { useInView } from 'react-intersection-observer';
 
 export default function TestimonialSection() {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  // Hook untuk memantau visibilitas elemen
   const { ref: headerRef, inView: headerInView } = useInView({
-    triggerOnce: true, // Animasi hanya berjalan sekali
-    threshold: 0.1, // Memicu saat 10% elemen terlihat
+    triggerOnce: true,
+    threshold: 0.1,
   });
 
   const { ref: contentRef, inView: contentInView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
-    delay: 200, // Sedikit jeda untuk efek yang lebih baik
+    delay: 200,
   });
 
   const testimonials = [
@@ -59,10 +58,7 @@ export default function TestimonialSection() {
 
   return (
     <section className="w-full bg-white font-jakarta text-gray-900 py-24 overflow-hidden">
-      {' '}
-      {/* Tambahkan overflow-hidden */}
       <div className="max-w-[70rem] mx-auto px-4">
-        {/* Bagian Header dengan animasi */}
         <div
           ref={headerRef}
           className={`transition-all duration-700 ease-out ${
@@ -72,7 +68,7 @@ export default function TestimonialSection() {
           }`}
         >
           <div className="max-w-[20rem] mb-10">
-            <p className="text-orange-600 uppercase tracking-widest text-sm font-semibold">
+            <p className="text-primary uppercase tracking-widest text-sm font-semibold">
               TESTIMONI
             </p>
             <h2 className="text-5xl font-bold font-jakarta mt-2 leading-tight">
@@ -81,7 +77,6 @@ export default function TestimonialSection() {
           </div>
         </div>
 
-        {/* Konten Testimoni dengan animasi */}
         <div
           ref={contentRef}
           className={`grid grid-cols-1 md:grid-cols-2 gap-8 items-start transition-all duration-700 ease-out ${
@@ -90,7 +85,6 @@ export default function TestimonialSection() {
               : 'opacity-0 translate-y-10'
           }`}
         >
-          {/* Kolom Kiri (Avatars dan Info Penulis) */}
           <div className="flex flex-col items-start">
             <div className="flex space-x-4 mb-8">
               {testimonials.map((testimonial, index) => (
@@ -98,7 +92,7 @@ export default function TestimonialSection() {
                   <div
                     className={`w-16 h-16 rounded-full border-2 shadow-md cursor-pointer transition-all duration-300 ${
                       index === activeIndex
-                        ? 'border-orange-600'
+                        ? 'border-primary'
                         : 'border-gray-300'
                     }`}
                     onClick={() => setActiveIndex(index)}
@@ -112,7 +106,7 @@ export default function TestimonialSection() {
                     />
                   </div>
                   {index === activeIndex && (
-                    <div className="absolute bottom-[-8px] right-[-8px] bg-orange-600 rounded-full p-1 z-10">
+                    <div className="absolute bottom-[-8px] right-[-8px] bg-primary rounded-full p-1 z-10">
                       <Quote size={16} className="text-white" fill="white" />
                     </div>
                   )}
@@ -129,7 +123,6 @@ export default function TestimonialSection() {
             </div>
           </div>
 
-          {/* Kolom Kanan (Teks Testimoni) */}
           <div>
             <p className="text-gray-700 text-lg leading-relaxed min-h-[180px]">
               {currentTestimonial.text}

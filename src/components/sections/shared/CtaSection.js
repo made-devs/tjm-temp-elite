@@ -1,9 +1,8 @@
 'use client';
 
 import { ArrowRight } from 'lucide-react';
-import TypingEffect from './TypingEffect'; // Menggunakan kembali komponen TypingEffect
+import TypingEffect from '../../ui/TypingEffect';
 
-// Daftar kata yang akan berganti-ganti
 const dynamicWords = ['dirawat', 'disempurnakan', 'diandalkan'];
 
 export default function CtaSection() {
@@ -15,10 +14,8 @@ export default function CtaSection() {
         </p>
         <h2 className="text-3xl md:text-6xl font-extrabold text-foreground mt-4 max-w-4xl mx-auto leading-tight">
           Siap merasakan performa terbaik? Mobil Anda layak untuk{' '}
-          {/* THE FIX: Tambahkan <br> yang hanya aktif di mobile */}
           <br className="md:hidden" />
           <span className="text-primary underline underline-offset-8 decoration-4">
-            {/* THE FIX: Ukuran kursor dibuat responsif */}
             <TypingEffect
               words={dynamicWords}
               cursorClassName="h-[2.25rem] md:h-[3.5rem]"
@@ -27,8 +24,8 @@ export default function CtaSection() {
         </h2>
         <div className="mt-12">
           <a
-            href="#contact" // Arahkan ke section kontak
-            className="inline-flex items-center gap-3 bg-primary text-white font-bold py-4 px-8 rounded-lg hover:bg-orange-500 transition-colors duration-300"
+            href="#contact"
+            className="inline-flex items-center gap-3 bg-primary text-white font-bold py-4 px-8 rounded-lg hover:bg-red-700 transition-colors duration-300"
           >
             Hubungi Kami Sekarang
             <ArrowRight size={20} />

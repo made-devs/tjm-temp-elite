@@ -33,7 +33,6 @@ export default function PartnersSection() {
         <div className="container mx-auto px-6 py-12">
           <div className="flex justify-around items-center flex-wrap gap-x-8 gap-y-6">
             {partnerLogos.map((logo, index) => (
-              // THE FIX: Menambahkan class dan style untuk animasi stagger
               <div
                 key={logo.name}
                 className={`
@@ -50,9 +49,8 @@ export default function PartnersSection() {
                 <Image
                   src={logo.src}
                   alt={logo.name}
-                  layout="fill"
-                  objectFit="contain"
-                  className="grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
+                  fill
+                  className="object-contain grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
                 />
               </div>
             ))}

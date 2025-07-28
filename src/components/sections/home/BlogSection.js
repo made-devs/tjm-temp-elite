@@ -102,8 +102,8 @@ export default function BlogSection() {
                   <Image
                     src={post.authorImage}
                     alt={post.title}
-                    layout="fill"
-                    objectFit="cover"
+                    fill
+                    className="object-cover"
                   />
                 </div>
                 <div>
@@ -128,8 +128,8 @@ export default function BlogSection() {
             <Image
               src={featuredPost.featuredImage}
               alt={featuredPost.title}
-              layout="fill"
-              objectFit="cover"
+              fill
+              className="object-cover"
             />
           </div>
 

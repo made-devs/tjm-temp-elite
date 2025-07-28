@@ -5,7 +5,8 @@
   --font-jakarta: var(--font-jakarta), sans-serif;
   --color-background: #fdfbfa;
   --color-foreground: #2c2c2c;
-  --color-primary: #f59e0b;
+  /* THE FIX: Warna utama diubah menjadi merah */
+  --color-primary: #dc2626;
   --color-muted: #a1a1aa;
 }
 
