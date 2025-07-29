@@ -1,19 +1,19 @@
-'use client';
+"use client";
 
-import { ArrowRight } from 'lucide-react';
-import TypingEffect from '../../ui/TypingEffect';
+import { ArrowRight } from "lucide-react";
+import TypingEffect from "../../ui/TypingEffect";
 
-const dynamicWords = ['dirawat', 'disempurnakan', 'diandalkan'];
+const dynamicWords = ["dirawat", "disempurnakan", "diandalkan"];
 
 export default function CtaSection() {
   return (
-    <section className="w-full font-jakarta bg-background py-24">
+    <section className="w-full font-jakarta bg-background pb-24">
       <div className="container mx-auto px-6 text-center">
         <p className="text-primary uppercase tracking-widest text-sm font-semibold">
           JANGAN TUNDA LAGI
         </p>
         <h2 className="text-3xl md:text-6xl font-extrabold text-foreground mt-4 max-w-4xl mx-auto leading-tight">
-          Siap merasakan performa terbaik? Mobil Anda layak untuk{' '}
+          Siap merasakan performa terbaik? Mobil Anda layak untuk{" "}
           <br className="md:hidden" />
           <span className="text-primary underline underline-offset-8 decoration-4">
             <TypingEffect

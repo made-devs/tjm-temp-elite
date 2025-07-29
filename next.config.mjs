@@ -3,12 +3,18 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'placehold.co',
-        port: '',
-        pathname: '/**',
+        protocol: "https",
+        hostname: "placehold.co",
+        port: "",
+        pathname: "/**",
       },
-      // Anda bisa menambahkan domain lain di sini jika perlu
+      // Tambahkan domain Imgur di sini agar bisa dioptimasi
+      {
+        protocol: "https",
+        hostname: "i.imgur.com",
+        port: "",
+        pathname: "/**",
+      },
     ],
   },
 };

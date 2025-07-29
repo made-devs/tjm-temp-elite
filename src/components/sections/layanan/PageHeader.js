@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { ChevronDown } from 'lucide-react';
-import { useInView } from 'react-intersection-observer';
+import { ChevronDown } from "lucide-react";
+import { useInView } from "react-intersection-observer";
 
 export default function PageHeader({ title, breadcrumb, backgroundImage }) {
   const { ref, inView } = useInView({
@@ -18,10 +18,12 @@ export default function PageHeader({ title, breadcrumb, backgroundImage }) {
       {/* Overlay Gelap */}
       <div className="absolute inset-0 bg-black/50"></div>
 
-      {/* Konten Teks */}
+      {/* Konten Teks dengan Animasi Blur */}
       <div
-        className={`relative z-10 text-center transition-all duration-700 ease-out ${
-          inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        className={`relative z-10 text-center font-jakarta transition-all duration-700 ease-out ${
+          inView
+            ? "opacity-100 translate-y-0 blur-0"
+            : "opacity-0 translate-y-10 blur-md"
         }`}
       >
         <p className="text-sm uppercase tracking-widest text-gray-300">
