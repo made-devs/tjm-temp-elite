@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link"; // Impor komponen Link
 import { Facebook, Instagram, ArrowUp } from "lucide-react";
 import { FaTiktok } from "react-icons/fa";
 
@@ -15,27 +16,27 @@ export default function Footer() {
   return (
     <footer className="w-full bg-foreground text-white py-16">
       <div className="container mx-auto px-6 flex flex-col items-center text-center">
-        <div className="mb-8">
+        <Link href="/" aria-label="Kembali ke Beranda" className="mb-8">
           <Image src="/logotjm.webp" alt="TJM Logo" width={120} height={34} />
-        </div>
+        </Link>
 
+        {/* SOLUSI: Mengganti semua <a> dengan <Link> untuk navigasi internal */}
         <nav className="flex flex-wrap justify-center gap-x-8 gap-y-2 mb-8 text-muted">
-          <a href="/" className="hover:text-white transition-colors">
+          <Link href="/" className="hover:text-white transition-colors">
             Home
-          </a>
-          <a href="/blog" className="hover:text-white transition-colors">
+          </Link>
+          <Link href="/blog" className="hover:text-white transition-colors">
             Blog
-          </a>
-          <a
+          </Link>
+          <Link
             href="/tentang-kami"
             className="hover:text-white transition-colors"
           >
             Tentang Kami
-          </a>
-          {/* Link Layanan dihapus untuk simplisitas */}
-          <a href="/kontak" className="hover:text-white transition-colors">
+          </Link>
+          <Link href="/kontak" className="hover:text-white transition-colors">
             Kontak
-          </a>
+          </Link>
         </nav>
 
         <div className="flex items-center gap-6 mb-12">
