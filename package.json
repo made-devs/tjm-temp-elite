@@ -9,8 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "lenis": "^1.0.42",
+    "embla-carousel-react": "^8.6.0",
     "gsap": "^3.12.5",
+    "lenis": "^1.0.42",
     "lucide-react": "^0.525.0",
     "next": "15.4.1",
     "react": "19.1.0",
