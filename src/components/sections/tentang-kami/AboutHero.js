@@ -10,7 +10,7 @@ export default function AboutHero() {
 
   return (
     <section
-      className="relative h-[60vh] w-full flex items-center justify-center text-white bg-cover bg-center"
+      className="relative h-[50vh] w-full flex items-center font-jakarta justify-center text-white bg-cover bg-center"
       style={{ backgroundImage: `url('/galeri5.webp')` }}
     >
       <div className="absolute inset-0 bg-black/60"></div>
@@ -25,7 +25,7 @@ export default function AboutHero() {
         <p className="text-sm uppercase tracking-widest text-gray-300">
           Lebih Dari Sekadar Bengkel
         </p>
-        <h1 className="text-5xl md:text-8xl font-extrabold mt-4">
+        <h1 className="text-5xl md:text-7xl font-extrabold mt-4">
           Cerita Kami
         </h1>
       </div>

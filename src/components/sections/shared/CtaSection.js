@@ -7,7 +7,7 @@ const dynamicWords = ["dirawat", "disempurnakan", "diandalkan"];
 
 export default function CtaSection() {
   return (
-    <section className="w-full font-jakarta bg-background pb-24">
+    <section className="w-full font-jakarta bg-background py-24">
       <div className="container mx-auto px-6 text-center">
         <p className="text-primary uppercase tracking-widest text-sm font-semibold">
           JANGAN TUNDA LAGI

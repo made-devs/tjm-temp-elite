@@ -1,18 +1,13 @@
-'use client';
+"use client";
 
-import {
-  Facebook,
-  Twitter,
-  Instagram,
-  Headset,
-  User,
-  LayoutGrid,
-} from 'lucide-react';
-import TypingEffect from '@/components/ui/TypingEffect';
-import { useInView } from 'react-intersection-observer';
+import { Facebook, Instagram, Headset, User, LayoutGrid } from "lucide-react";
+// Impor ikon TikTok dari library baru
+import { FaTiktok } from "react-icons/fa";
+import TypingEffect from "@/components/ui/TypingEffect";
+import { useInView } from "react-intersection-observer";
 
 export default function HeroSection() {
-  const wordsForTyping = ['MAKSIMAL', 'TERBAIK', 'ANDALAN'];
+  const wordsForTyping = ["MAKSIMAL", "TERBAIK", "ANDALAN"];
 
   const { ref: mainRef, inView: mainInView } = useInView({
     triggerOnce: true,
@@ -36,7 +31,7 @@ export default function HeroSection() {
       <main
         ref={mainRef}
         className={`flex-grow flex items-center px-6 md:px-8 transition-all duration-700 ease-out ${
-          mainInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          mainInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
         <div className="max-w-[85rem] py-[6rem] sm:py-[8rem]">
@@ -61,8 +56,8 @@ export default function HeroSection() {
         ref={footerRef}
         className={`w-full p-6 md:p-8 flex flex-col md:flex-row justify-between items-center gap-4 z-10 transition-all duration-700 ease-out ${
           footerInView
-            ? 'opacity-100 translate-y-0'
-            : 'opacity-0 translate-y-10'
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-10"
         }`}
       >
         <div className="text-center md:text-left text-xs uppercase tracking-widest text-muted">
@@ -71,28 +66,29 @@ export default function HeroSection() {
         </div>
         <div className="flex items-center gap-5 text-muted text-sm">
           <a
-            href="#"
+            href="https://www.facebook.com/profile.php?id=100069959570435"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-2 hover:text-foreground transition-colors"
           >
             <Facebook size={16} /> Facebook
           </a>
           <a
-            href="#"
-            className="flex items-center gap-2 hover:text-foreground transition-colors"
-          >
-            <Twitter size={16} /> Twitter
-          </a>
-          <a
-            href="#"
-            className="flex items-center gap-2 hover:text-foreground transition-colors"
-          >
-            Dribbble
-          </a>
-          <a
-            href="#"
+            href="https://www.instagram.com/tjmautocare/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-2 hover:text-foreground transition-colors"
           >
             <Instagram size={16} /> Instagram
+          </a>
+          <a
+            href="https://www.tiktok.com/@tjmautocare"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 hover:text-foreground transition-colors"
+          >
+            {/* Menggunakan ikon baru */}
+            <FaTiktok size={16} /> TikTok
           </a>
         </div>
       </footer>
@@ -101,8 +97,8 @@ export default function HeroSection() {
         ref={sidebarRef}
         className={`absolute top-1/2 right-0 -translate-y-1/2 flex flex-col gap-1 bg-white p-2 rounded-l-lg shadow-md z-10 transition-all duration-700 ease-out ${
           sidebarInView
-            ? 'opacity-100 translate-x-0'
-            : 'opacity-0 translate-x-10'
+            ? "opacity-100 translate-x-0"
+            : "opacity-0 translate-x-10"
         }`}
       >
         <a

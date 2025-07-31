@@ -5,7 +5,6 @@ import Image from "next/image";
 import { ChevronDown, ArrowRight } from "lucide-react";
 import { useInView } from "react-intersection-observer";
 
-// Komponen Card tidak perlu diubah
 const AccordionCard = ({ variant, isOpen, onClick }) => (
   <div className="bg-[#2c2c2c] text-white font-jakarta p-8 rounded-2xl w-full border border-transparent transition-all duration-300">
     <div
@@ -27,8 +26,9 @@ const AccordionCard = ({ variant, isOpen, onClick }) => (
     >
       <div className="overflow-hidden">
         <p className="text-gray-400 pb-6">{variant.description}</p>
+        {/* SOLUSI: Mengarahkan link ke halaman kontak dengan parameter */}
         <a
-          href="#"
+          href={`/kontak?paket=${variant.slug}`}
           className="group inline-flex items-center gap-2 bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-red-700 transition-colors duration-300"
         >
           Pilih Paket Ini
@@ -43,6 +43,7 @@ const AccordionCard = ({ variant, isOpen, onClick }) => (
 );
 
 export default function PackageDetailSection({ packageData }) {
+  // ... sisa kode komponen tetap sama ...
   const [activeIndex, setActiveIndex] = useState(0);
 
   const { ref: imageRef, inView: imageInView } = useInView({
@@ -62,10 +63,8 @@ export default function PackageDetailSection({ packageData }) {
   };
 
   return (
-    // SOLUSI: Menghapus 'overflow-hidden' dari section
     <section className="bg-background text-foreground py-24">
       <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-        {/* Kolom Kiri: Wrapper untuk elemen sticky */}
         <div
           ref={imageRef}
           className={`lg:sticky top-24 transition-all duration-1000 ease-out ${
@@ -92,7 +91,6 @@ export default function PackageDetailSection({ packageData }) {
           </div>
         </div>
 
-        {/* Kolom Kanan: Detail Paket (Accordion) */}
         <div ref={cardsRef} className="flex flex-col gap-8">
           {packageData.variants.map((variant, index) => (
             <div

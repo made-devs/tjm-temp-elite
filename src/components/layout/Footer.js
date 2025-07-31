@@ -1,13 +1,14 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import { Facebook, Twitter, Instagram, ArrowUp } from 'lucide-react';
+import Image from "next/image";
+import { Facebook, Instagram, ArrowUp } from "lucide-react";
+import { FaTiktok } from "react-icons/fa";
 
 export default function Footer() {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   };
 
@@ -19,32 +20,48 @@ export default function Footer() {
         </div>
 
         <nav className="flex flex-wrap justify-center gap-x-8 gap-y-2 mb-8 text-muted">
-          <a href="#" className="hover:text-white transition-colors">
+          <a href="/" className="hover:text-white transition-colors">
             Home
           </a>
-          <a href="#" className="hover:text-white transition-colors">
+          <a href="/blog" className="hover:text-white transition-colors">
             Blog
           </a>
-          <a href="#" className="hover:text-white transition-colors">
+          <a
+            href="/tentang-kami"
+            className="hover:text-white transition-colors"
+          >
             Tentang Kami
           </a>
-          <a href="#" className="hover:text-white transition-colors">
-            Layanan
-          </a>
-          <a href="#" className="hover:text-white transition-colors">
+          {/* Link Layanan dihapus untuk simplisitas */}
+          <a href="/kontak" className="hover:text-white transition-colors">
             Kontak
           </a>
         </nav>
 
         <div className="flex items-center gap-6 mb-12">
-          <a href="#" className="text-muted hover:text-white transition-colors">
+          <a
+            href="https://www.facebook.com/profile.php?id=100069959570435"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted hover:text-white transition-colors"
+          >
             <Facebook size={20} />
           </a>
-          <a href="#" className="text-muted hover:text-white transition-colors">
-            <Twitter size={20} />
-          </a>
-          <a href="#" className="text-muted hover:text-white transition-colors">
+          <a
+            href="https://www.instagram.com/tjmautocare/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted hover:text-white transition-colors"
+          >
             <Instagram size={20} />
+          </a>
+          <a
+            href="https://www.tiktok.com/@tjmautocare"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted hover:text-white transition-colors"
+          >
+            <FaTiktok size={20} />
           </a>
         </div>
 

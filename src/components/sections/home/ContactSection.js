@@ -1,8 +1,8 @@
 "use client";
 
-import LocationSlider from "@/components/ui/LocationSlider";
 import { useState, useCallback } from "react";
 import { useInView } from "react-intersection-observer";
+import LocationSlider from "../../ui/LocationSlider";
 
 // Data untuk setiap lokasi bengkel
 const workshopLocations = [
@@ -154,6 +154,8 @@ const workshopLocations = [
 
 export default function ContactSection() {
   const [activeId, setActiveId] = useState(workshopLocations[0].id);
+  const [mapContent, setMapContent] = useState(workshopLocations[0]);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   const { ref: titleRef, inView: titleInView } = useInView({
     triggerOnce: true,
@@ -170,12 +172,19 @@ export default function ContactSection() {
     delay: 400,
   });
 
-  const selectedWorkshop =
-    workshopLocations.find((w) => w.id === activeId) || workshopLocations[0];
+  const handleSelectSlide = useCallback(
+    (id) => {
+      if (id === activeId) return;
 
-  const handleSelectSlide = useCallback((id) => {
-    setActiveId(id);
-  }, []);
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setActiveId(id);
+        setMapContent(workshopLocations.find((w) => w.id === id));
+        setIsTransitioning(false);
+      }, 350); // Setengah dari durasi transisi
+    },
+    [activeId]
+  );
 
   return (
     <section className="w-full font-jakarta bg-background py-24">
@@ -210,23 +219,29 @@ export default function ContactSection() {
           />
         </div>
 
-        {/* Peta Interaktif */}
+        {/* Peta Interaktif dengan transisi blur */}
         <div
           ref={mapRef}
           className={`mt-16 w-full h-[500px] rounded-lg overflow-hidden transition-all duration-700 ease-out ${
             mapInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <iframe
-            key={selectedWorkshop.id}
-            src={selectedWorkshop.mapUrl}
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
+          <div
+            className={`w-full h-full transition-all duration-700 ease-out ${
+              isTransitioning ? "opacity-0 blur-md" : "opacity-100 blur-0"
+            }`}
+          >
+            <iframe
+              key={mapContent.id}
+              src={mapContent.mapUrl}
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
       </div>
     </section>

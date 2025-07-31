@@ -10,31 +10,33 @@ export default function PostBody({ post }) {
   });
 
   return (
-    <section ref={ref} className="bg-background text-foreground pb-24">
-      <div className="container mx-auto px-6">
+    <section ref={ref} className="bg-background text-foreground py-24">
+      <div className="container mx-auto px-6 max-w-3xl">
+        {/* SOLUSI: Info penulis dan tanggal dipindahkan ke sini */}
         <div
-          className={`relative w-full h-[50vh] rounded-2xl overflow-hidden mb-12 transition-all duration-1000 ease-out delay-200 ${
-            inView ? "opacity-100 scale-100" : "opacity-0 scale-95"
+          className={`flex items-center gap-4 mb-12 transition-all duration-1000 ease-out ${
+            inView ? "opacity-100" : "opacity-0"
           }`}
         >
           <Image
-            src={post.featuredImage}
-            alt={post.title}
-            fill
-            className="object-cover"
+            src={post.authorAvatar}
+            alt={post.author}
+            width={48}
+            height={48}
+            className="rounded-full"
           />
+          <div>
+            <p className="font-bold">{post.author}</p>
+            <p className="text-sm text-muted">{post.date}</p>
+          </div>
         </div>
-        {/*
-          SOLUSI:
-          - Ukuran font diperbesar ke 'prose-xl'.
-          - Warna teks paragraf ('prose-p') dan list ('prose-li') diubah agar lebih gelap dan mudah dibaca.
-          - Menghapus 'text-muted' agar tidak menimpa semua style.
-        */}
+
+        {/* Gambar utama dihapus dari sini */}
+
         <div
-          className={`prose prose-xl max-w-3xl mx-auto prose-headings:text-foreground prose-strong:text-foreground prose-p:text-foreground/80 prose-li:text-foreground/80 transition-all duration-1000 ease-out delay-500 ${
+          className={`prose prose-xl mx-auto prose-headings:text-foreground prose-strong:text-foreground prose-p:text-foreground/80 prose-li:text-foreground/80 transition-all duration-1000 ease-out delay-200 ${
             inView ? "opacity-100" : "opacity-0"
           }`}
-          // Render HTML dari file data
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
       </div>

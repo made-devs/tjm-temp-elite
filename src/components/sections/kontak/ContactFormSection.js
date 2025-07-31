@@ -1,12 +1,16 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { MessageSquare } from "lucide-react";
-import { serviceLinks } from "@/data/servicePackages";
+// Impor kedua array data
+import {
+  allServiceVariants,
+  groupedServiceVariants,
+} from "@/data/servicePackages";
 import ImageSlideshow from "../../ui/ImageSlideshow";
+import { useSearchParams } from "next/navigation";
 
-// Daftar gambar yang akan ditampilkan di slideshow
 const slideshowImages = [
   "/galeri1.webp",
   "/galeri3.webp",
@@ -21,6 +25,25 @@ export default function ContactFormSection() {
     selectedPackage: "",
     message: "",
   });
+
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    const selectedPkgSlug = searchParams.get("paket");
+    if (selectedPkgSlug) {
+      // Logic pencarian tetap sama, menggunakan allServiceVariants
+      const matchedPackage = allServiceVariants.find(
+        (variant) => variant.slug === selectedPkgSlug
+      );
+
+      if (matchedPackage) {
+        setFormData((prev) => ({
+          ...prev,
+          selectedPackage: matchedPackage.title,
+        }));
+      }
+    }
+  }, [searchParams]);
 
   const { ref, inView } = useInView({
     triggerOnce: true,
@@ -37,7 +60,7 @@ export default function ContactFormSection() {
     const adminPhoneNumber = "6285169576890";
     const waMessage = `Halo TJM, saya ${formData.name}.
 Mobil: ${formData.carType}.
-Saya tertarik dengan: ${formData.selectedPackage}.
+Saya tertarik dengan: ${formData.selectedPackage || "Belum memilih paket"}.
 
 Pesan: ${formData.message}`;
     const encodedMessage = encodeURIComponent(waMessage);
@@ -46,9 +69,8 @@ Pesan: ${formData.message}`;
   };
 
   return (
-    <section className="bg-background text-foreground py-24">
+    <section className="bg-background font-jakarta text-foreground py-24">
       <div className="container mx-auto px-6">
-        {/* Teks Pengantar */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-5xl font-extrabold">Kirim Pesan Cepat</h2>
           <p className="text-muted mt-4 text-lg">
@@ -58,20 +80,16 @@ Pesan: ${formData.message}`;
           </p>
         </div>
 
-        {/* Kontainer Utama yang Menggabungkan Gambar dan Form */}
         <div
           ref={ref}
           className={`grid grid-cols-1 lg:grid-cols-2 shadow-2xl transition-all duration-1000 ease-out ${
             inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          {/* Kolom Kiri: Image Slideshow */}
-          {/* SOLUSI: Terapkan rounding di sini untuk kontrol per sudut */}
-          <div className="relative min-h-[600px] h-full rounded-l-2xl lg:rounded-l-2xl overflow-hidden">
+          <div className="relative min-h-[600px] h-full rounded-t-2xl lg:rounded-l-2xl lg:rounded-tr-none overflow-hidden">
             <ImageSlideshow images={slideshowImages} />
           </div>
 
-          {/* Kolom Kanan: Form WhatsApp */}
           <form
             onSubmit={handleSubmit}
             className="p-8 md:p-12 bg-foreground text-white h-full flex flex-col justify-center rounded-b-2xl lg:rounded-r-2xl lg:rounded-bl-none"
@@ -127,10 +145,15 @@ Pesan: ${formData.message}`;
                   className="w-full bg-[#2c2c2c] border border-muted/50 rounded-md p-3 focus:ring-primary focus:border-primary"
                 >
                   <option value="">Pilih salah satu...</option>
-                  {serviceLinks.map((service) => (
-                    <option key={service.href} value={service.title}>
-                      {service.title}
-                    </option>
+                  {/* Menggunakan data yang dikelompokkan dengan <optgroup> */}
+                  {groupedServiceVariants.map((group) => (
+                    <optgroup key={group.name} label={group.name}>
+                      {group.variants.map((service) => (
+                        <option key={service.slug} value={service.title}>
+                          {service.title}
+                        </option>
+                      ))}
+                    </optgroup>
                   ))}
                 </select>
               </div>

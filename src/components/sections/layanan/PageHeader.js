@@ -29,7 +29,9 @@ export default function PageHeader({ title, breadcrumb, backgroundImage }) {
         <p className="text-sm uppercase tracking-widest text-gray-300">
           {breadcrumb}
         </p>
-        <h1 className="text-5xl md:text-7xl font-extrabold mt-4">{title}</h1>
+        <h1 className="text-5xl md:text-7xl px-10 font-extrabold mt-4">
+          {title}
+        </h1>
       </div>
 
       {/* Tombol Scroll Down (Opsional) */}

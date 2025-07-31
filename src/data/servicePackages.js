@@ -1,6 +1,6 @@
 // src/data/servicePackages.js
 
-// Data untuk halaman "Paket Combo Kaki-Kaki"
+// Menambahkan 'slug' unik untuk setiap varian paket
 export const comboKakiKaki = {
   intro: {
     subTitle: "SOLUSI KAKI-KAKI LENGKAP",
@@ -10,33 +10,36 @@ export const comboKakiKaki = {
   },
   variants: [
     {
-      title: "Paket Komplit + AC",
+      slug: "kaki-kaki-ac",
+      title: "Kaki-Kaki Komplit + AC",
       description:
-        "Servis kaki-kaki menyeluruh, dipadukan dengan perawatan sistem AC untuk kenyamanan maksimal di segala cuaca. Termasuk pembersihan evaporator, pengecekan freon, dan filter kabin.",
+        "Solusi lengkap mencakup 27 item pengerjaan, mulai dari tune-up 65 komponen, servis kaki-kaki 25 titik, hingga servis dan pembersihan AC. Mengembalikan kenyamanan dan keamanan berkendara Anda secara total.",
       image: "https://i.imgur.com/MDDAasV.png",
     },
     {
-      title: "Paket + Rust Protection",
+      slug: "kaki-kaki-rust-protection",
+      title: "Kaki-Kaki Komplit + Rust Protection",
       description:
-        "Lindungi bagian bawah mobil Anda dari karat dan korosi. Paket ini menggabungkan servis kaki-kaki dengan aplikasi lapisan anti karat dan restorasi kolong profesional.",
+        "Perawatan kaki-kaki komplit dipadukan dengan restorasi kolong dan aplikasi lapisan anti karat berteknologi tinggi. Memberikan perlindungan ekstra terhadap korosi, panas, dan suara.",
       image: "https://i.imgur.com/JfdodPE.png",
     },
     {
-      title: "Paket + Engine Pro Tune Up",
+      slug: "kaki-kaki-engine-tune-up",
+      title: "Kaki-Kaki Komplit + Engine Pro Tune Up",
       description:
-        "Tingkatkan performa mesin secara signifikan. Selain perawatan kaki-kaki, paket ini mencakup tune up 65 komponen, gurah mesin, dan pembersihan injektor.",
+        "Kombinasi sempurna antara servis kaki-kaki 25 titik dengan tune-up mesin 65 komponen. Termasuk gurah mesin, injector cleaning, dan catalytic cleaner untuk performa mesin yang maksimal.",
       image: "https://i.imgur.com/ZHTy54C.png",
     },
     {
-      title: "Paket + Full Auto Detailing",
+      slug: "kaki-kaki-auto-detailing",
+      title: "Kaki-Kaki Komplit + Full Auto Detailing",
       description:
-        "Buat mobil Anda tampil seperti baru. Paket ini melengkapi servis kaki-kaki dengan detailing eksterior 3-langkah, pembersihan interior menyeluruh, dan perawatan kaca.",
+        "Paket perawatan total yang menggabungkan servis kaki-kaki komplit dengan detailing eksterior 3-langkah, pembersihan interior menyeluruh, dan perawatan kaca dari jamur.",
       image: "https://i.imgur.com/vRUBwn5.png",
     },
   ],
 };
 
-// Data untuk halaman "Paket Combo Super Komplit"
 export const comboSuperKomplit = {
   intro: {
     subTitle: "PERAWATAN TOTAL KENDARAAN",
@@ -46,18 +49,21 @@ export const comboSuperKomplit = {
   },
   variants: [
     {
+      slug: "super-komplit-nano-coating",
       title: "Super Komplit + Nano Coating",
       description:
         "Perawatan total dari mesin hingga kaki-kaki, diakhiri dengan lapisan nano ceramic coating untuk proteksi dan kilap cat yang tahan lama.",
       image: "https://i.imgur.com/cAfOdfV.png",
     },
     {
+      slug: "super-komplit-kaca-film",
       title: "Super Komplit + Kaca Film",
       description:
         "Selain servis menyeluruh, dapatkan juga pemasangan kaca film premium untuk meningkatkan privasi, keamanan, dan kenyamanan dari panas matahari.",
       image: "https://i.imgur.com/QSlbk8B.png",
     },
     {
+      slug: "super-komplit-audio-upgrade",
       title: "Super Komplit + Audio Upgrade",
       description:
         "Untuk Anda yang menginginkan performa maksimal luar dan dalam. Paket ini mencakup servis total dan upgrade sistem audio untuk pengalaman berkendara terbaik.",
@@ -66,7 +72,6 @@ export const comboSuperKomplit = {
   ],
 };
 
-// Data untuk halaman "Paket Custom Suspension"
 export const customSuspension = {
   intro: {
     subTitle: "SUSPENSI SESUAI KEINGINAN ANDA",
@@ -76,18 +81,21 @@ export const customSuspension = {
   },
   variants: [
     {
+      slug: "air-suspension",
       title: "Air Suspension",
       description:
         "Kustomisasi tinggi kendaraan secara instan dengan sistem suspensi udara (air-sus). Sempurna untuk gaya dan fungsionalitas, dikendalikan dengan mudah dari dashboard atau smartphone Anda.",
       image: "https://i.imgur.com/tzKLRrz.png",
     },
     {
+      slug: "coilover-shock-absorber",
       title: "Coilover & Shock Absorber",
       description:
         "Dapatkan handling dan stabilitas superior dengan pemasangan coilover atau shock absorber kustom. Kami menyediakan pilihan dari berbagai merek terkemuka yang bisa disesuaikan dengan kebutuhan Anda.",
       image: "https://i.imgur.com/iSqXjXY.png",
     },
     {
+      slug: "custom-static-fitment",
       title: "Custom Static / Fitment",
       description:
         "Untuk para pecinta fitment, kami menawarkan layanan setup suspensi statis yang presisi. Dapatkan tampilan ceper yang sempurna tanpa mengorbankan kenyamanan secara berlebihan.",
@@ -96,7 +104,6 @@ export const customSuspension = {
   ],
 };
 
-// Data untuk halaman "Paket Diesel"
 export const paketDiesel = {
   intro: {
     subTitle: "PERAWATAN KHUSUS MESIN DIESEL",
@@ -106,42 +113,49 @@ export const paketDiesel = {
   },
   variants: [
     {
+      slug: "servis-common-rail",
       title: "Servis Common Rail",
       description:
         "Pembersihan dan kalibrasi sistem common rail untuk memastikan tekanan bahan bakar yang stabil dan pembakaran yang efisien.",
       image: "https://i.imgur.com/kISTutH.png",
     },
     {
+      slug: "kalibrasi-injektor",
       title: "Kalibrasi Injektor",
       description:
         "Mengembalikan presisi semprotan injektor ke standar pabrikan untuk performa maksimal dan konsumsi bahan bakar yang lebih irit.",
       image: "https://i.imgur.com/Gr0QYql.png",
     },
     {
+      slug: "servis-turbocharger",
       title: "Servis Turbocharger",
       description:
         "Inspeksi dan pembersihan komponen turbo untuk mencegah kebocoran dan memastikan boost yang responsif.",
       image: "https://i.imgur.com/LEaiAMp.png",
     },
     {
+      slug: "pembersihan-egr-valve",
       title: "Pembersihan EGR Valve",
       description:
         "Membersihkan katup EGR dari kerak karbon untuk mengoptimalkan sirkulasi gas buang dan mengurangi emisi.",
       image: "https://i.imgur.com/sHZE4DP.png",
     },
     {
+      slug: "pembersihan-dpf",
       title: "Pembersihan DPF",
       description:
         "Layanan pembersihan Diesel Particulate Filter (DPF) untuk mengatasi penyumbatan dan menjaga performa mesin.",
       image: "https://i.imgur.com/yIFOPHI.png",
     },
     {
+      slug: "purging-sistem-bahan-bakar",
       title: "Purging Sistem Bahan Bakar",
       description:
         "Menguras dan membersihkan seluruh jalur bahan bakar dari tangki hingga injektor untuk menghilangkan endapan dan kontaminan.",
       image: "https://i.imgur.com/HUn2LHq.png",
     },
     {
+      slug: "scan-mesin-diesel",
       title: "Scan Mesin Diesel Lengkap",
       description:
         "Diagnostik komputerisasi menggunakan alat scan khusus diesel untuk mendeteksi dan mengatasi masalah secara akurat.",
@@ -150,7 +164,6 @@ export const paketDiesel = {
   ],
 };
 
-// Data untuk halaman "Paket Kaki Kaki"
 export const paketKakiKaki = {
   intro: {
     subTitle: "FONDASI KENDARAAN ANDA",
@@ -160,24 +173,28 @@ export const paketKakiKaki = {
   },
   variants: [
     {
+      slug: "servis-ball-joint",
       title: "Pengecekan & Servis Ball Joint",
       description:
         "Memastikan ball joint berfungsi optimal untuk menjaga kestabilan roda dan mencegah keausan ban yang tidak merata.",
       image: "https://i.imgur.com/zPeuknD.png",
     },
     {
+      slug: "servis-tie-rod",
       title: "Servis & Ganti Tie Rod",
       description:
         "Perbaikan atau penggantian tie rod untuk mengembalikan presisi kemudi dan menghilangkan getaran pada setir.",
       image: "https://i.imgur.com/cuj60X2.png",
     },
     {
+      slug: "cek-shock-absorber",
       title: "Pengecekan Shock Absorber",
       description:
         "Inspeksi shock absorber untuk mendeteksi kebocoran atau pelemahan, memastikan bantingan mobil tetap nyaman dan terkendali.",
       image: "https://i.imgur.com/F0savm6.png",
     },
     {
+      slug: "servis-bushing-stabilizer",
       title: "Servis Bushing & Link Stabilizer",
       description:
         "Mengganti komponen karet seperti bushing dan link stabilizer yang sudah aus untuk menghilangkan bunyi dan menjaga stabilitas saat bermanuver.",
@@ -186,7 +203,6 @@ export const paketKakiKaki = {
   ],
 };
 
-// Data untuk halaman "Paket Overhaul Engine"
 export const paketOverhaulEngine = {
   intro: {
     subTitle: "MENGEMBALIKAN PERFORMA PRIMA",
@@ -196,18 +212,21 @@ export const paketOverhaulEngine = {
   },
   variants: [
     {
+      slug: "inspeksi-overhaul",
       title: "Pembongkaran & Inspeksi Detail",
       description:
         "Setiap komponen mesin dibongkar dan diperiksa secara teliti untuk mengidentifikasi tingkat keausan dan kerusakan.",
       image: "https://i.imgur.com/1JQxDIu.png",
     },
     {
+      slug: "pembersihan-ruang-bakar",
       title: "Pembersihan Ruang Bakar & Piston",
       description:
         "Membersihkan kerak karbon dari piston, kepala silinder, dan blok mesin untuk mengembalikan efisiensi pembakaran.",
       image: "https://i.imgur.com/ew2IeON.png",
     },
     {
+      slug: "penggantian-komponen-overhaul",
       title: "Penggantian Komponen Vital",
       description:
         "Mengganti komponen penting seperti ring piston, metal, dan seal klep dengan suku cadang berkualitas tinggi.",
@@ -216,7 +235,6 @@ export const paketOverhaulEngine = {
   ],
 };
 
-// Data untuk halaman "Paket Racksteer Hemat"
 export const paketRacksteerHemat = {
   intro: {
     subTitle: "SOLUSI KEMUDI PRESISI",
@@ -226,6 +244,7 @@ export const paketRacksteerHemat = {
   },
   variants: [
     {
+      slug: "restorasi-rack-steer",
       title: "Restorasi & Perbaikan Rack Steer",
       description:
         "Layanan ini mencakup pembongkaran, pembersihan, penggantian seal, dan pelumasan ulang komponen rack steer untuk menghilangkan masalah umum tanpa perlu mengganti seluruh unit.",
@@ -234,7 +253,6 @@ export const paketRacksteerHemat = {
   ],
 };
 
-// Data untuk halaman "Paket Special"
 export const paketSpecial = {
   intro: {
     subTitle: "LAYANAN EKSKLUSIF",
@@ -244,12 +262,14 @@ export const paketSpecial = {
   },
   variants: [
     {
+      slug: "servis-cbu-supercar",
       title: "Servis Mobil CBU & Supercar",
       description:
         "Perawatan rutin dan perbaikan kompleks untuk supercar dan mobil CBU dengan standar pengerjaan tertinggi dan suku cadang orisinal.",
       image: "https://i.imgur.com/Q4G7rpP.png",
     },
     {
+      slug: "servis-mobil-klasik",
       title: "Perbaikan & Perawatan Mobil Klasik",
       description:
         "Restorasi dan perawatan mobil klasik untuk menjaga keaslian dan performanya, ditangani oleh mekanik yang berpengalaman di bidangnya.",
@@ -258,7 +278,6 @@ export const paketSpecial = {
   ],
 };
 
-// Data untuk halaman "Paket Steering"
 export const paketSteering = {
   intro: {
     subTitle: "KONTROL DAN RESPON KEMUDI",
@@ -268,18 +287,21 @@ export const paketSteering = {
   },
   variants: [
     {
+      slug: "servis-power-steering-hidrolik",
       title: "Servis Power Steering Hidrolik",
       description:
         "Mengatasi masalah kebocoran, setir berat, atau bunyi pada sistem power steering hidrolik konvensional.",
       image: "https://i.imgur.com/GpBwT2l.png",
     },
     {
+      slug: "perbaikan-eps",
       title: "Perbaikan Electric Power Steering (EPS)",
       description:
         "Diagnostik dan perbaikan pada motor elektrik, sensor, dan modul EPS untuk mengatasi malfungsi pada sistem kemudi modern.",
       image: "https://i.imgur.com/DOQuJAT.png",
     },
     {
+      slug: "ganti-minyak-power-steering",
       title: "Pengecekan & Ganti Minyak Power Steering",
       description:
         "Mengganti minyak power steering secara berkala untuk menjaga performa dan memperpanjang umur komponen sistem kemudi.",
@@ -288,7 +310,6 @@ export const paketSteering = {
   ],
 };
 
-// Data untuk halaman baru "Paket Super Hemat"
 export const paketSuperHemat = {
   intro: {
     subTitle: "PERAWATAN EFISIEN & TERJANGKAU",
@@ -298,24 +319,28 @@ export const paketSuperHemat = {
   },
   variants: [
     {
+      slug: "ganti-oli-filter",
       title: "Ganti Oli & Filter",
       description:
         "Penggantian oli mesin dan filter oli menggunakan produk berkualitas untuk memastikan pelumasan mesin yang optimal.",
       image: "https://i.imgur.com/n18zKaQ.png",
     },
     {
+      slug: "cek-rem",
       title: "Pengecekan Rem & Minyak Rem",
       description:
         "Inspeksi menyeluruh pada sistem pengereman, termasuk kampas, piringan, dan level minyak rem untuk menjamin keamanan.",
       image: "https://i.imgur.com/HU3tYJz.png",
     },
     {
+      slug: "cek-aki",
       title: "Pengecekan Aki & Sistem Kelistrikan",
       description:
         "Memastikan kondisi aki, alternator, dan sistem kelistrikan lainnya berfungsi dengan baik untuk mencegah masalah starter.",
       image: "https://i.imgur.com/fDdpDEU.png",
     },
     {
+      slug: "cek-cairan-filter-udara",
       title: "Pengecekan Cairan & Filter Udara",
       description:
         "Memeriksa dan mengisi ulang cairan esensial seperti air radiator dan wiper, serta membersihkan atau mengganti filter udara.",
@@ -324,6 +349,7 @@ export const paketSuperHemat = {
   ],
 };
 
+// Daftar link untuk menu dan form kontak
 export const serviceLinks = [
   { title: "Paket Combo Kaki-Kaki", href: "/layanan/paket-combo-kaki-kaki" },
   {
@@ -341,4 +367,30 @@ export const serviceLinks = [
   { title: "Paket Special", href: "/layanan/paket-special" },
   { title: "Paket Steering", href: "/layanan/paket-steering" },
   { title: "Paket Super Hemat", href: "/layanan/paket-super-hemat" },
+];
+
+export const allServiceVariants = [
+  ...comboKakiKaki.variants,
+  ...comboSuperKomplit.variants,
+  ...customSuspension.variants,
+  ...paketDiesel.variants,
+  ...paketKakiKaki.variants,
+  ...paketOverhaulEngine.variants,
+  ...paketRacksteerHemat.variants,
+  ...paketSpecial.variants,
+  ...paketSteering.variants,
+  ...paketSuperHemat.variants,
+];
+
+export const groupedServiceVariants = [
+  { name: "Paket Combo Kaki-Kaki", variants: comboKakiKaki.variants },
+  { name: "Paket Combo Super Komplit", variants: comboSuperKomplit.variants },
+  { name: "Paket Custom Suspension", variants: customSuspension.variants },
+  { name: "Paket Diesel", variants: paketDiesel.variants },
+  { name: "Paket Kaki Kaki", variants: paketKakiKaki.variants },
+  { name: "Paket Overhaul Engine", variants: paketOverhaulEngine.variants },
+  { name: "Paket Racksteer Hemat", variants: paketRacksteerHemat.variants },
+  { name: "Paket Special", variants: paketSpecial.variants },
+  { name: "Paket Steering", variants: paketSteering.variants },
+  { name: "Paket Super Hemat", variants: paketSuperHemat.variants },
 ];

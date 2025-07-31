@@ -1,7 +1,6 @@
 import { Fragment } from "react";
 import { allPosts } from "@/data/blog/posts";
-// SOLUSI: Mengubah import path ke lokasi baru
-import PostHeader from "@/components/sections/blog/PostHeader";
+import PageHeader from "@/components/sections/layanan/PageHeader"; // Menggunakan PageHeader standar
 import PostBody from "@/components/sections/blog/PostBody";
 import CtaSection from "@/components/sections/shared/CtaSection";
 
@@ -32,7 +31,13 @@ export default function SinglePostPage({ params }) {
 
   return (
     <Fragment>
-      <PostHeader post={post} />
+      {/* SOLUSI: Menggunakan PageHeader sebagai hero section */}
+      <PageHeader
+        title={post.title}
+        breadcrumb={`Blog / ${post.category}`}
+        backgroundImage={post.featuredImage}
+      />
+      {/* PostBody sekarang akan berisi info penulis dan konten */}
       <PostBody post={post} />
       <CtaSection />
     </Fragment>
