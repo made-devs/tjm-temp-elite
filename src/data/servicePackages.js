@@ -49,24 +49,30 @@ export const comboSuperKomplit = {
   },
   variants: [
     {
-      slug: "super-komplit-nano-coating",
-      title: "Super Komplit + Nano Coating",
+      slug: "super-komplit-1",
+      // Judul diperbarui sesuai brosur
+      title: "Super Komplit 1",
+      // Deskripsi dirangkum dari poin-poin di brosur
       description:
-        "Perawatan total dari mesin hingga kaki-kaki, diakhiri dengan lapisan nano ceramic coating untuk proteksi dan kilap cat yang tahan lama.",
+        "Paket servis terlengkap yang mencakup tune-up 65 komponen, servis kaki-kaki, ganti oli Shell, rubberized undercoat, dan servis rem komplit untuk performa dan proteksi menyeluruh.",
       image: "https://i.imgur.com/cAfOdfV.png",
     },
     {
-      slug: "super-komplit-kaca-film",
-      title: "Super Komplit + Kaca Film",
+      slug: "super-komplit-2",
+      // Judul diperbarui sesuai brosur
+      title: "Super Komplit 2",
+      // Deskripsi dirangkum dari poin-poin di brosur
       description:
-        "Selain servis menyeluruh, dapatkan juga pemasangan kaca film premium untuk meningkatkan privasi, keamanan, dan kenyamanan dari panas matahari.",
+        "Semua layanan dari Super Komplit 1 ditambah dengan Full Detailing interior & eksterior, glass coating, dan Nano Ceramic Coating 3 lapis untuk tampilan mobil seperti baru.",
       image: "https://i.imgur.com/QSlbk8B.png",
     },
     {
-      slug: "super-komplit-audio-upgrade",
-      title: "Super Komplit + Audio Upgrade",
+      slug: "combo-all-in-1",
+      // Judul diperbarui sesuai brosur
+      title: "Combo All in 1",
+      // Deskripsi dirangkum dari poin-poin di brosur
       description:
-        "Untuk Anda yang menginginkan performa maksimal luar dan dalam. Paket ini mencakup servis total dan upgrade sistem audio untuk pengalaman berkendara terbaik.",
+        "Paket ultimate yang menggabungkan semua layanan terbaik: tune-up, servis kaki-kaki, full detailing, nano ceramic coating, dan rekondisi per/spring untuk kondisi mobil yang sempurna luar dan dalam.",
       image: "https://i.imgur.com/POXKHNM.png",
     },
   ],
@@ -81,24 +87,24 @@ export const customSuspension = {
   },
   variants: [
     {
-      slug: "air-suspension",
-      title: "Air Suspension",
+      slug: "custom-suspension-hemat",
+      title: "Custom Suspension Hemat",
       description:
-        "Kustomisasi tinggi kendaraan secara instan dengan sistem suspensi udara (air-sus). Sempurna untuk gaya dan fungsionalitas, dikendalikan dengan mudah dari dashboard atau smartphone Anda.",
+        "Paket ekonomis untuk mendapatkan tampilan ceper (lowering) melalui custom suspensi dan cutting per, sudah termasuk inspeksi kaki-kaki dan tune up 65 komponen.",
       image: "https://i.imgur.com/tzKLRrz.png",
     },
     {
-      slug: "coilover-shock-absorber",
-      title: "Coilover & Shock Absorber",
+      slug: "custom-suspension-spring",
+      title: "Custom Suspension + Custom Spring",
       description:
-        "Dapatkan handling dan stabilitas superior dengan pemasangan coilover atau shock absorber kustom. Kami menyediakan pilihan dari berbagai merek terkemuka yang bisa disesuaikan dengan kebutuhan Anda.",
+        "Solusi kustomisasi tinggi/ceper mobil sesuai keinginan (harian/extreme) dengan custom spring, termasuk painting shockbreaker, tune up, dan spooring balancing.",
       image: "https://i.imgur.com/iSqXjXY.png",
     },
     {
-      slug: "custom-static-fitment",
-      title: "Custom Static / Fitment",
+      slug: "combo-suspension-coil-over",
+      title: "Combo Suspension + Custom Coil Over",
       description:
-        "Untuk para pecinta fitment, kami menawarkan layanan setup suspensi statis yang presisi. Dapatkan tampilan ceper yang sempurna tanpa mengorbankan kenyamanan secara berlebihan.",
+        "Paket suspensi ultimate dengan custom coil over yang bisa diatur tinggi dan cepernya, dipadukan dengan custom spring, tune up, spooring, dan inspeksi AC.",
       image: "https://i.imgur.com/v8ezXrg.png",
     },
   ],
@@ -113,52 +119,52 @@ export const paketDiesel = {
   },
   variants: [
     {
-      slug: "servis-common-rail",
-      title: "Servis Common Rail",
+      slug: "tune-up-diesel-komplit",
+      title: "Tune Up Diesel Komplit",
       description:
-        "Pembersihan dan kalibrasi sistem common rail untuk memastikan tekanan bahan bakar yang stabil dan pembakaran yang efisien.",
+        "Perawatan esensial untuk mesin diesel, meliputi tune up 65 komponen, general check up kaki-kaki & AC, serta service purging untuk membersihkan sistem bahan bakar.",
       image: "https://i.imgur.com/kISTutH.png",
     },
     {
-      slug: "kalibrasi-injektor",
-      title: "Kalibrasi Injektor",
+      slug: "tune-up-diesel-super-komplit",
+      title: "Tune Up Diesel Super Komplit",
       description:
-        "Mengembalikan presisi semprotan injektor ke standar pabrikan untuk performa maksimal dan konsumsi bahan bakar yang lebih irit.",
+        "Lebih dari sekadar tune up, paket ini mencakup kalibrasi injector & common rail untuk pembakaran sempurna, irit BBM, dan tenaga yang lebih buas.",
       image: "https://i.imgur.com/Gr0QYql.png",
     },
     {
-      slug: "servis-turbocharger",
-      title: "Servis Turbocharger",
+      slug: "tune-up-diesel-ultimate",
+      title: "Tune Up Diesel Ultimate",
       description:
-        "Inspeksi dan pembersihan komponen turbo untuk mencegah kebocoran dan memastikan boost yang responsif.",
+        "Paket perawatan diesel terlengkap dengan tambahan ganti oli mesin Shell HX 7, filter oli, dan transfusi darah untuk performa mesin yang paling puncak.",
       image: "https://i.imgur.com/LEaiAMp.png",
     },
     {
-      slug: "pembersihan-egr-valve",
-      title: "Pembersihan EGR Valve",
+      slug: "pasti-puas-1-diesel",
+      title: "Pasti Puas 1 Diesel",
       description:
-        "Membersihkan katup EGR dari kerak karbon untuk mengoptimalkan sirkulasi gas buang dan mengurangi emisi.",
+        "Kombinasi servis kaki-kaki komplit dengan tune up diesel super komplit. Solusi total untuk performa mesin dan kenyamanan berkendara.",
       image: "https://i.imgur.com/sHZE4DP.png",
     },
     {
-      slug: "pembersihan-dpf",
-      title: "Pembersihan DPF",
+      slug: "pasti-puas-2-diesel",
+      title: "Pasti Puas 2 Diesel",
       description:
-        "Layanan pembersihan Diesel Particulate Filter (DPF) untuk mengatasi penyumbatan dan menjaga performa mesin.",
+        "Gabungan servis kaki-kaki komplit dan tune up diesel komplit, ditambah ganti oli Shell, transfusi darah, dan engine flush untuk kesehatan mesin jangka panjang.",
       image: "https://i.imgur.com/yIFOPHI.png",
     },
     {
-      slug: "purging-sistem-bahan-bakar",
-      title: "Purging Sistem Bahan Bakar",
+      slug: "pasti-puas-3-diesel",
+      title: "Pasti Puas 3 Diesel",
       description:
-        "Menguras dan membersihkan seluruh jalur bahan bakar dari tangki hingga injektor untuk menghilangkan endapan dan kontaminan.",
+        "Perawatan premium yang menggabungkan tune up diesel super komplit dengan full detailing, glass coating, dan nano ceramic coating 3 lapis.",
       image: "https://i.imgur.com/HUn2LHq.png",
     },
     {
-      slug: "scan-mesin-diesel",
-      title: "Scan Mesin Diesel Lengkap",
+      slug: "pasti-puas-4-diesel",
+      title: "Pasti Puas 4 Diesel",
       description:
-        "Diagnostik komputerisasi menggunakan alat scan khusus diesel untuk mendeteksi dan mengatasi masalah secara akurat.",
+        "Paket paling ultimate: servis kaki-kaki komplit, tune up diesel ultimate, ganti oli, full detailing, dan nano ceramic coating 3 lapis. Kondisi mobil kembali seperti baru.",
       image: "https://i.imgur.com/gBHdaci.png",
     },
   ],
@@ -173,31 +179,31 @@ export const paketKakiKaki = {
   },
   variants: [
     {
-      slug: "servis-ball-joint",
-      title: "Pengecekan & Servis Ball Joint",
+      slug: "kaki-kaki-super-hemat",
+      title: "Kaki-Kaki Super Hemat",
       description:
-        "Memastikan ball joint berfungsi optimal untuk menjaga kestabilan roda dan mencegah keausan ban yang tidak merata.",
+        "Paket servis kaki-kaki esensial yang mencakup 17 item pengerjaan, termasuk servis link stabilizer, ball joint, tie rod, dan general check up 25 titik.",
       image: "https://i.imgur.com/zPeuknD.png",
     },
     {
-      slug: "servis-tie-rod",
-      title: "Servis & Ganti Tie Rod",
+      slug: "kaki-kaki-komplit",
+      title: "Kaki-Kaki Komplit",
       description:
-        "Perbaikan atau penggantian tie rod untuk mengembalikan presisi kemudi dan menghilangkan getaran pada setir.",
+        "Perawatan kaki-kaki menyeluruh dengan tambahan tune up 65 komponen, gurah mesin, injector cleaning, dan rubberized undercoat untuk proteksi ekstra.",
       image: "https://i.imgur.com/cuj60X2.png",
     },
     {
-      slug: "cek-shock-absorber",
-      title: "Pengecekan Shock Absorber",
+      slug: "kaki-kaki-super-komplit",
+      title: "Kaki-Kaki Super Komplit",
       description:
-        "Inspeksi shock absorber untuk mendeteksi kebocoran atau pelemahan, memastikan bantingan mobil tetap nyaman dan terkendali.",
+        "Semua layanan dari paket Komplit ditambah dengan rekondisi CV joint, inspeksi AC, dan rekondisi per/spring untuk kenyamanan suspensi yang maksimal.",
       image: "https://i.imgur.com/F0savm6.png",
     },
     {
-      slug: "servis-bushing-stabilizer",
-      title: "Servis Bushing & Link Stabilizer",
+      slug: "kaki-kaki-ultimate",
+      title: "Kaki-Kaki Ultimate",
       description:
-        "Mengganti komponen karet seperti bushing dan link stabilizer yang sudah aus untuk menghilangkan bunyi dan menjaga stabilitas saat bermanuver.",
+        "Paket paling lengkap yang mencakup semua layanan dari Super Komplit ditambah dengan service + ganti oli shock breaker dan rekondisi idle arm.",
       image: "https://i.imgur.com/8zMxP1e.png",
     },
   ],
@@ -212,24 +218,24 @@ export const paketOverhaulEngine = {
   },
   variants: [
     {
-      slug: "inspeksi-overhaul",
-      title: "Pembongkaran & Inspeksi Detail",
+      slug: "overhaul-engine",
+      title: "Overhaul Engine",
       description:
-        "Setiap komponen mesin dibongkar dan diperiksa secara teliti untuk mengidentifikasi tingkat keausan dan kerusakan.",
+        "Paket esensial untuk restorasi mesin, mencakup turun 1/2 mesin, sandblasting karat, pembersihan oil sludge, dan servis komponen internal seperti crankshaft dan silinder head.",
       image: "https://i.imgur.com/1JQxDIu.png",
     },
     {
-      slug: "pembersihan-ruang-bakar",
-      title: "Pembersihan Ruang Bakar & Piston",
+      slug: "overhaul-engine-komplit",
+      title: "Overhaul Engine Komplit",
       description:
-        "Membersihkan kerak karbon dari piston, kepala silinder, dan blok mesin untuk mengembalikan efisiensi pembakaran.",
+        "Semua layanan dari paket Overhaul Engine, ditambah dengan ganti oli Shell HX 7, oil treatment, engine flush, dan catalytic cleaner untuk pembersihan dan proteksi menyeluruh.",
       image: "https://i.imgur.com/ew2IeON.png",
     },
     {
-      slug: "penggantian-komponen-overhaul",
-      title: "Penggantian Komponen Vital",
+      slug: "super-overhaul-engine",
+      title: "Super Overhaul Engine",
       description:
-        "Mengganti komponen penting seperti ring piston, metal, dan seal klep dengan suku cadang berkualitas tinggi.",
+        "Paket paling premium yang mencakup semua layanan dari paket Komplit, ditambah servis bearing crankshaft, connecting rod, washer crankshaft, dan rust remover area kaki-kaki.",
       image: "https://i.imgur.com/DG9z1TR.png",
     },
   ],
@@ -244,10 +250,10 @@ export const paketRacksteerHemat = {
   },
   variants: [
     {
-      slug: "restorasi-rack-steer",
-      title: "Restorasi & Perbaikan Rack Steer",
+      slug: "kaki-kaki-racksteer-hemat",
+      title: "Kaki-Kaki Racksteer Hemat",
       description:
-        "Layanan ini mencakup pembongkaran, pembersihan, penggantian seal, dan pelumasan ulang komponen rack steer untuk menghilangkan masalah umum tanpa perlu mengganti seluruh unit.",
+        "Perawatan terlengkap dan bergaransi, mencakup 21 item pengerjaan termasuk service rekondisi & setel ulang racksteer (EPS), tune up, gurah mesin, dan inspeksi kaki-kaki 25 titik.",
       image: "https://i.imgur.com/i2D6YLu.png",
     },
   ],
@@ -255,24 +261,24 @@ export const paketRacksteerHemat = {
 
 export const paketSpecial = {
   intro: {
-    subTitle: "LAYANAN EKSKLUSIF",
-    title: "Penanganan Khusus untuk Kendaraan Istimewa",
+    subTitle: "LAYANAN EKSKLUSIF & PAKET HEMAT",
+    title: "Penanganan Khusus & Perawatan Terjangkau",
     description:
-      "Kami memiliki tim dan peralatan khusus untuk menangani kendaraan CBU (Completely Built Up), supercar, dan mobil klasik yang membutuhkan perhatian dan keahlian ekstra.",
+      "Kami menyediakan berbagai paket spesial yang dirancang untuk kebutuhan spesifik, mulai dari perawatan mobil CBU hingga paket servis hemat untuk menjaga performa kendaraan Anda sehari-hari.",
   },
   variants: [
     {
-      slug: "servis-cbu-supercar",
-      title: "Servis Mobil CBU & Supercar",
+      slug: "paket-special1",
+      title: "Paket Special 1",
       description:
-        "Perawatan rutin dan perbaikan kompleks untuk supercar dan mobil CBU dengan standar pengerjaan tertinggi dan suku cadang orisinal.",
+        "Perawatan premium yang mencakup tune up 65 komponen, gurah mesin, injector cleaning, catalytic cleaner, dan servis fuel system lengkap dengan penggantian oli Shell HX 8.",
       image: "https://i.imgur.com/Q4G7rpP.png",
     },
     {
-      slug: "servis-mobil-klasik",
-      title: "Perbaikan & Perawatan Mobil Klasik",
+      slug: "paket-special2",
+      title: "Paket Special 2",
       description:
-        "Restorasi dan perawatan mobil klasik untuk menjaga keaslian dan performanya, ditangani oleh mekanik yang berpengalaman di bidangnya.",
+        "Paket yang berfokus pada keamanan, meliputi tune up 65 komponen, gurah mesin/injector cleaning, servis purging diesel, dan pengecekan serta servis sistem pengereman.",
       image: "https://i.imgur.com/TRax4CT.png",
     },
   ],
@@ -287,24 +293,24 @@ export const paketSteering = {
   },
   variants: [
     {
-      slug: "servis-power-steering-hidrolik",
-      title: "Servis Power Steering Hidrolik",
+      slug: "steering-komplit",
+      title: "Steering Komplit",
       description:
-        "Mengatasi masalah kebocoran, setir berat, atau bunyi pada sistem power steering hidrolik konvensional.",
+        "Servis kaki-kaki dan rekondisi steering terlengkap, mencakup 20 item pengerjaan termasuk tune up, gurah mesin, dan pengecekan sensor-sensor kelistrikan.",
       image: "https://i.imgur.com/GpBwT2l.png",
     },
     {
-      slug: "perbaikan-eps",
-      title: "Perbaikan Electric Power Steering (EPS)",
+      slug: "combo-kaki-kaki-steering-super-komplit",
+      title: "Combo Kaki-Kaki + Steering Super Komplit",
       description:
-        "Diagnostik dan perbaikan pada motor elektrik, sensor, dan modul EPS untuk mengatasi malfungsi pada sistem kemudi modern.",
+        "Kombinasi servis kaki-kaki dan steering dengan tambahan service racksteer, rekondisi cross joint, dan rubberized undercoat untuk perlindungan maksimal.",
       image: "https://i.imgur.com/DOQuJAT.png",
     },
     {
-      slug: "ganti-minyak-power-steering",
-      title: "Pengecekan & Ganti Minyak Power Steering",
+      slug: "combo-kaki-kaki-steering-ultimate",
+      title: "Combo Kaki-Kaki + Steering Ultimate",
       description:
-        "Mengganti minyak power steering secara berkala untuk menjaga performa dan memperpanjang umur komponen sistem kemudi.",
+        "Paket terlengkap yang menggabungkan semua layanan dari paket Super Komplit ditambah dengan service shockbreaker, rekondisi CV joint, dan rekondisi per/spring.",
       image: "https://i.imgur.com/FG9gxVB.png",
     },
   ],
@@ -319,31 +325,31 @@ export const paketSuperHemat = {
   },
   variants: [
     {
-      slug: "ganti-oli-filter",
-      title: "Ganti Oli & Filter",
+      slug: "super-hemat-1",
+      title: "Super Hemat 1",
       description:
-        "Penggantian oli mesin dan filter oli menggunakan produk berkualitas untuk memastikan pelumasan mesin yang optimal.",
+        "Paket terlengkap & terhemat, mencakup 15 item pengerjaan termasuk tune up, gurah mesin, ganti oli Shell HX 7, dan general check up kaki-kaki 25 titik.",
       image: "https://i.imgur.com/n18zKaQ.png",
     },
     {
-      slug: "cek-rem",
-      title: "Pengecekan Rem & Minyak Rem",
+      slug: "super-hemat-2",
+      title: "Super Hemat 2",
       description:
-        "Inspeksi menyeluruh pada sistem pengereman, termasuk kampas, piringan, dan level minyak rem untuk menjamin keamanan.",
+        "Semua layanan dari Super Hemat 1 dengan tambahan service AC All In + AC Cleaner untuk memastikan kesejukan kabin yang maksimal.",
       image: "https://i.imgur.com/HU3tYJz.png",
     },
     {
-      slug: "cek-aki",
-      title: "Pengecekan Aki & Sistem Kelistrikan",
+      slug: "super-hemat-3",
+      title: "Super Hemat 3",
       description:
-        "Memastikan kondisi aki, alternator, dan sistem kelistrikan lainnya berfungsi dengan baik untuk mencegah masalah starter.",
+        "Paket Super Hemat dengan fokus pada sistem bahan bakar, mencakup kuras tangki dan service fuel pump untuk efisiensi pembakaran yang lebih baik.",
       image: "https://i.imgur.com/fDdpDEU.png",
     },
     {
-      slug: "cek-cairan-filter-udara",
-      title: "Pengecekan Cairan & Filter Udara",
+      slug: "combo-super-hemat-auto-detailing",
+      title: "Combo Super Hemat + Auto Detailing",
       description:
-        "Memeriksa dan mengisi ulang cairan esensial seperti air radiator dan wiper, serta membersihkan atau mengganti filter udara.",
+        "Kombinasi perawatan mesin dan kaki-kaki dari paket Super Hemat dengan tambahan auto detailing seperti glass treatment, waxing, dan nano burn coating headlamp.",
       image: "https://i.imgur.com/NzJZZvN.png",
     },
   ],
