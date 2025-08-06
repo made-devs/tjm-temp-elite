@@ -1,82 +1,81 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { ArrowRight, ArrowLeft } from 'lucide-react';
-import { useInView } from 'react-intersection-observer';
-import useBreakpoint from '../../hooks/useBreakpoint';
+import { useState, useEffect } from "react"; // 1. Tambahkan useEffect
+import { ArrowRight, ArrowLeft } from "lucide-react";
+import { useInView } from "react-intersection-observer";
+import useBreakpoint from "../../hooks/useBreakpoint";
 
-// Data layanan diperbarui dengan properti harga
 const services = [
   {
-    id: '01',
-    title: 'Paket Combo Kaki Kaki',
+    id: "01",
+    title: "Paket Combo Kaki Kaki",
     description:
-      'Solusi lengkap untuk suspensi, tersedia dalam berbagai pilihan combo (+AC, +Engine Tune Up, +Auto Detailing, +Rust Protection). Promo spesial mulai dari 1.600K.',
-    image: '/galeri3.webp',
-    price: 'Mulai dari Rp 1.600.000,-', // Harga ditambahkan di sini
+      "Solusi lengkap untuk suspensi, tersedia dalam berbagai pilihan combo (+AC, +Engine Tune Up, +Auto Detailing, +Rust Protection). Promo spesial mulai dari 1.600K.",
+    image: "/galeri3.webp",
+    price: "Mulai dari Rp 1.600.000,-",
   },
   {
-    id: '02',
-    title: 'Paket Combo Super Komplit',
+    id: "02",
+    title: "Paket Combo Super Komplit",
     description:
-      'Perawatan total meliputi mesin, kaki-kaki, dan servis berkala lainnya.',
-    image: '/galeri1.webp',
+      "Perawatan total meliputi mesin, kaki-kaki, dan servis berkala lainnya.",
+    image: "/galeri1.webp",
   },
   {
-    id: '03',
-    title: 'Paket Custom Suspension',
+    id: "03",
+    title: "Paket Custom Suspension",
     description:
-      'Modifikasi dan penyesuaian suspensi untuk performa dan gaya maksimal.',
-    image: '/bengkel4.webp',
+      "Modifikasi dan penyesuaian suspensi untuk performa dan gaya maksimal.",
+    image: "/bengkel4.webp",
   },
   {
-    id: '04',
-    title: 'Paket Diesel',
+    id: "04",
+    title: "Paket Diesel",
     description:
-      'Perawatan khusus untuk mesin diesel, termasuk injektor dan filter solar.',
-    image: '/galeri4.webp',
+      "Perawatan khusus untuk mesin diesel, termasuk injektor dan filter solar.",
+    image: "/galeri4.webp",
   },
   {
-    id: '05',
-    title: 'Paket Kaki Kaki',
+    id: "05",
+    title: "Paket Kaki Kaki",
     description:
-      'Pengecekan dan perbaikan komponen suspensi, tie rod, dan ball joint.',
-    image: '/galeri3.webp',
+      "Pengecekan dan perbaikan komponen suspensi, tie rod, dan ball joint.",
+    image: "/galeri3.webp",
   },
   {
-    id: '06',
-    title: 'Paket Overhoul Engine',
+    id: "06",
+    title: "Paket Overhoul Engine",
     description:
-      'Pembongkaran dan perbaikan total untuk mengembalikan performa mesin.',
-    image: '/galeri1.webp',
+      "Pembongkaran dan perbaikan total untuk mengembalikan performa mesin.",
+    image: "/galeri1.webp",
   },
   {
-    id: '07',
-    title: 'Paket Racksteer Hemat',
+    id: "07",
+    title: "Paket Racksteer Hemat",
     description:
-      'Solusi ekonomis untuk memperbaiki masalah sistem kemudi rack steer.',
-    image: '/galeri2.webp',
+      "Solusi ekonomis untuk memperbaiki masalah sistem kemudi rack steer.",
+    image: "/galeri2.webp",
   },
   {
-    id: '08',
-    title: 'Paket Special',
+    id: "08",
+    title: "Paket Special",
     description:
-      'Layanan kustom sesuai kebutuhan spesifik kendaraan premium Anda.',
-    image: '/bengkel4.webp',
+      "Layanan kustom sesuai kebutuhan spesifik kendaraan premium Anda.",
+    image: "/bengkel4.webp",
   },
   {
-    id: '09',
-    title: 'Paket Steering',
+    id: "09",
+    title: "Paket Steering",
     description:
-      'Perbaikan komprehensif untuk semua jenis masalah sistem kemudi.',
-    image: '/galeri2.webp',
+      "Perbaikan komprehensif untuk semua jenis masalah sistem kemudi.",
+    image: "/galeri2.webp",
   },
   {
-    id: '10',
-    title: 'Paket Super Hemat',
+    id: "10",
+    title: "Paket Super Hemat",
     description:
-      'Paket servis berkala dengan harga terjangkau untuk semua jenis mobil.',
-    image: '/galeri4.webp',
+      "Paket servis berkala dengan harga terjangkau untuk semua jenis mobil.",
+    image: "/galeri4.webp",
   },
 ];
 
@@ -85,7 +84,7 @@ export default function ServicePackages() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const breakpoint = useBreakpoint();
-  const itemsPerView = breakpoint === 'lg' || breakpoint === 'xl' ? 4 : 2;
+  const itemsPerView = breakpoint === "lg" || breakpoint === "xl" ? 4 : 2;
 
   const totalItems = services.length;
   const maxIndex = totalItems - itemsPerView;
@@ -94,6 +93,14 @@ export default function ServicePackages() {
     triggerOnce: true,
     threshold: 0.1,
   });
+
+  // 2. Preload images saat komponen pertama kali render
+  useEffect(() => {
+    services.forEach((service) => {
+      const img = new Image();
+      img.src = service.image;
+    });
+  }, []);
 
   const currentImage =
     services.find((s) => s.id === hoveredServiceId)?.image ||
@@ -120,7 +127,7 @@ export default function ServicePackages() {
         {/* Kontainer Carousel */}
         <div
           className={`relative z-10 h-[70vh] lg:h-[80vh] w-full flex flex-col justify-between transition-all duration-700 ease-out ${
-            inView ? 'opacity-100' : 'opacity-0'
+            inView ? "opacity-100" : "opacity-0"
           }`}
           onMouseLeave={() => setHoveredServiceId(null)}
         >
@@ -143,15 +150,15 @@ export default function ServicePackages() {
                     <div
                       className={`absolute inset-0 transition-colors duration-300 ${
                         hoveredServiceId === service.id
-                          ? 'bg-primary/70'
-                          : 'bg-black/50'
+                          ? "bg-primary/70"
+                          : "bg-black/50"
                       }`}
                     ></div>
                     <div
                       className={`relative z-10 text-4xl font-bold transition-opacity duration-300 ${
                         hoveredServiceId === service.id
-                          ? 'opacity-0'
-                          : 'opacity-100'
+                          ? "opacity-0"
+                          : "opacity-100"
                       }`}
                     >
                       {service.id}
@@ -160,8 +167,8 @@ export default function ServicePackages() {
                       <div
                         className={`transition-all duration-300 ease-in-out overflow-hidden ${
                           hoveredServiceId === service.id
-                            ? 'max-h-[4rem] opacity-100'
-                            : 'max-h-0 opacity-0'
+                            ? "max-h-[4rem] opacity-100"
+                            : "max-h-0 opacity-0"
                         }`}
                       >
                         <div className="text-[3rem] font-bold text-transparent [-webkit-text-stroke:1px_white]">
@@ -174,13 +181,12 @@ export default function ServicePackages() {
                         </h3>
                       </div>
 
-                      {/* Tampilkan Harga Sebelum Hover */}
                       {service.price && (
                         <div
                           className={`transition-all duration-300 ease-in-out mt-2 ${
                             hoveredServiceId === service.id
-                              ? 'max-h-0 opacity-0'
-                              : 'max-h-40 opacity-100'
+                              ? "max-h-0 opacity-0"
+                              : "max-h-40 opacity-100"
                           }`}
                         >
                           <p className="text-sm font-semibold">
@@ -189,12 +195,11 @@ export default function ServicePackages() {
                         </div>
                       )}
 
-                      {/* Tampilkan Deskripsi Saat Hover */}
                       <div
                         className={`transition-all duration-300 ease-in-out overflow-hidden ${
                           hoveredServiceId === service.id
-                            ? 'max-h-40 opacity-100 mt-4'
-                            : 'max-h-0 opacity-0'
+                            ? "max-h-40 opacity-100 mt-4"
+                            : "max-h-0 opacity-0"
                         }`}
                       >
                         <p className="text-xs sm:text-sm">
@@ -207,8 +212,8 @@ export default function ServicePackages() {
                           size={24}
                           className={`text-white transition-transform duration-300 ease-in-out ${
                             hoveredServiceId === service.id
-                              ? '-rotate-45'
-                              : 'rotate-0'
+                              ? "-rotate-45"
+                              : "rotate-0"
                           }`}
                         />
                       </div>
