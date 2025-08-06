@@ -13,6 +13,10 @@ const jakarta = Plus_Jakarta_Sans({
 export const metadata = {
   title: 'TJM Auto Care',
   description: 'Bengkel Nomor 1 di Indonesia.',
+  icons: {
+    icon: '/logotjm.webp',
+    apple: '/logotjm.webp',
+  },
 };
 
 export default function RootLayout({ children }) {

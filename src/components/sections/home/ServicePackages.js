@@ -10,7 +10,7 @@ const services = [
     id: "01",
     title: "Paket Combo Kaki Kaki",
     description:
-      "Solusi lengkap untuk suspensi, tersedia dalam berbagai pilihan combo (+AC, +Engine Tune Up, +Auto Detailing, +Rust Protection). Promo spesial mulai dari 1.600K.",
+      "Atasi masalah kaki-kaki mobil dengan Paket Combo Komplit kami. Pilih tambahan layanan sesuai kebutuhan Anda: Tune Up Mesin, Perawatan AC, Anti Karat, atau Full Auto Detailing. Solusi lengkap untuk performa dan kenyamanan, harga promo mulai dari Rp 1.600.000,-",
     image: "/galeri3.webp",
     price: "Mulai dari Rp 1.600.000,-",
   },
@@ -18,64 +18,73 @@ const services = [
     id: "02",
     title: "Paket Combo Super Komplit",
     description:
-      "Perawatan total meliputi mesin, kaki-kaki, dan servis berkala lainnya.",
+      "Perawatan total mobil dengan seri Paket Combo Super Komplit. Pilih tingkatan sesuai kebutuhan, dari servis esensial hingga paket All In One. Lengkap, bergaransi, harga mulai Rp 2.200.000,-",
     image: "/galeri1.webp",
+    price: "Mulai dari Rp 2.200.000,-", // Ditambahkan
   },
   {
     id: "03",
     title: "Paket Custom Suspension",
     description:
-      "Modifikasi dan penyesuaian suspensi untuk performa dan gaya maksimal.",
-    image: "/bengkel4.webp",
+      "Ubah tampilan dan handling mobil sesuai keinginanmu dengan seri Paket Custom Suspension. Pilih level modifikasi dari Paket Hemat (cutting per), + Custom Spring, hingga + Custom Coilover untuk kontrol penuh. Semua paket sudah termasuk tune up dan inspeksi. Dapatkan suspensi idamanmu, harga mulai dari Rp 999.000,-.",
+    image: "/galeri6.webp",
+    price: "Mulai dari Rp 999.000,-", // Ditambahkan
   },
   {
     id: "04",
     title: "Paket Diesel",
     description:
-      "Perawatan khusus untuk mesin diesel, termasuk injektor dan filter solar.",
+      "Maksimalkan performa mesin diesel Anda dengan seri Paket Tune Up Diesel. Pilih dari level Komplit, Super Komplit, hingga Ultimate untuk pembersihan dan kalibrasi menyeluruh. Jaga mesin diesel Anda tetap prima, harga mulai dari Rp 999.000,-",
     image: "/galeri4.webp",
+    price: "Mulai dari Rp 999.000,-", // Ditambahkan
   },
   {
     id: "05",
     title: "Paket Kaki Kaki",
     description:
-      "Pengecekan dan perbaikan komponen suspensi, tie rod, dan ball joint.",
+      "Kembalikan kenyamanan berkendara dengan seri Paket Kaki-Kaki kami. Tersedia dalam berbagai tingkatan dari Super Hemat, Komplit, Super Komplit, hingga Ultimate untuk mengatasi semua masalah suspensi Anda. Solusi lengkap untuk kaki-kaki, harga promo mulai dari Rp 990.000,-",
     image: "/galeri3.webp",
+    price: "Mulai dari Rp 990.000,-", // Ditambahkan
   },
   {
     id: "06",
-    title: "Paket Overhoul Engine",
+    title: "Paket Overhaul Engine",
     description:
-      "Pembongkaran dan perbaikan total untuk mengembalikan performa mesin.",
+      "Cegah biaya mahal dengan seri Paket Overhaul Engine kami untuk membersihkan kerak dan lumpur mesin. Pilih dari paket standar, Komplit, hingga Super sesuai kebutuhan Anda. Kembalikan performa mesin, harga mulai dari Rp 2.500.000,-",
     image: "/galeri1.webp",
+    price: "Mulai dari Rp 2.500.000,-", // Ditambahkan
   },
   {
     id: "07",
     title: "Paket Racksteer Hemat",
     description:
-      "Solusi ekonomis untuk memperbaiki masalah sistem kemudi rack steer.",
+      "Atasi masalah racksteer dan kaki-kaki dengan Paket Racksteer Hemat. Solusi lengkap dan bergaransi untuk mengembalikan kestabilan dan kenyamanan kemudi Anda, harga promo mulai dari Rp 1.250.000,-",
     image: "/galeri2.webp",
+    price: "Mulai dari Rp 1.250.000,-", // Ditambahkan
   },
   {
     id: "08",
     title: "Paket Special",
     description:
-      "Layanan kustom sesuai kebutuhan spesifik kendaraan premium Anda.",
+      "Pilih dari beragam TJM Special Package untuk perawatan mobil yang cepat dan terjangkau. Mulai dari Paket Basic untuk tune up, hingga paket yang lebih lengkap seperti Platinum. Solusi hemat untuk berbagai kebutuhan, harga mulai dari Rp 375.000,-",
     image: "/bengkel4.webp",
+    price: "Mulai dari Rp 375.000,-", // Ditambahkan
   },
   {
     id: "09",
     title: "Paket Steering",
     description:
-      "Perbaikan komprehensif untuk semua jenis masalah sistem kemudi.",
+      "Atasi semua masalah sistem kemudi dengan seri Paket Steering kami. Pilih dari Paket Komplit untuk perbaikan mendasar, atau gabungkan dengan perbaikan kaki-kaki melalui Paket Combo Super Komplit dan Ultimate. Solusi presisi untuk kemudi yang stabil, harga mulai Rp 1.500.000,-",
     image: "/galeri2.webp",
+    price: "Mulai dari Rp 1.500.000,-", // Ditambahkan
   },
   {
     id: "10",
     title: "Paket Super Hemat",
     description:
-      "Paket servis berkala dengan harga terjangkau untuk semua jenis mobil.",
+      "Dapatkan perawatan terlengkap dan terhemat dengan seri Paket Super Hemat kami. Pilih dari berbagai variasi yang mencakup tune up, pembersihan mesin, hingga kombinasi dengan servis AC atau auto detailing. Solusi lengkap dan terjangkau, harga mulai Rp 1.400.000,-",
     image: "/galeri4.webp",
+    price: "Mulai dari Rp 1.400.000,-", // Ditambahkan
   },
 ];
 

@@ -17,6 +17,7 @@ const nextConfig = {
       },
     ],
   },
+  // Tidak perlu konfigurasi tambahan untuk favicon karena sudah diatur di metadata
 };
 
 export default nextConfig;
